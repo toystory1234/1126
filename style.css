@@ -1,11 +1,24 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 .cat-container {
-    width: 300px;
-    height: 300px;
-    background-image: url('cat.jpg');
+    position: relative;
+    width:500px;
+    height:500px;
+    background-image: url('cat.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
 }
 
 .cat-container.shake {
@@ -15,21 +28,22 @@
 /* 鼻のクリック可能エリア */
 .nose-area {
     position: absolute;
-    top: 60%;  /* 猫の鼻の位置に合わせて調整 */
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50px;  /* 猫の鼻の位置に合わせて調整 */
+    left: 80px;
     width: 60px;
     height: 60px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
+    background: yellow;
+    border-radius: 80%;
     cursor: pointer;
 }
-```
 
-## HTML
+/* マウスを乗せた時 */
+.nose-area:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    background: rgba(255, 255, 255, 0.3);
+}
 
-```html
-<div class="cat-container" id="cat">
-    <div class="nose-area" id="nose"></div>
-</div>
-```
+/* クリックした時 */
+.nose-area:active {
+    transform: translate(-50%, -50%) scale(0.5);
+}
