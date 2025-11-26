@@ -19,10 +19,10 @@
 /* 鼻のクリック可能エリア */
 .nose-area {
     position: absolute;
-    top: 50px;  /* 猫の鼻の位置に合わせて調整 */
-    left: 80px;
-    width: 60px;
-    height: 60px;
+    top: 100px;  /* 猫の鼻の位置に合わせて調整 */
+    left: 100px;
+    width: 50px;
+    height: 50px;
     background: yellow;
     border-radius: 80%;
     cursor: pointer;
