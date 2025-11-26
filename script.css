@@ -1,0 +1,87 @@
+.cat-container {
+    background-image: url('cat.png');
+    background-size: cover;  /* 画像を要素全体に広げる */
+    background-position: center;  /* 中央配置 */
+    background-repeat: no-repeat;  /* 繰り返しなし */
+    width: 300px;
+    height: 300px;
+}
+
+.cat-container {
+position: relative;
+display: inline-block;
+transition: transform 0.3s ease;
+}
+
+.cat-container.shake {
+animation: shake 0.5s;
+}
+
+.cat-image {
+width: 300px;
+height: auto;
+display: block;
+border-radius: 10px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.nose-area {
+position: absolute;
+top: 50%;  /* 画像に合わせて調整 */
+left: 50%;  /* 画像に合わせて調整 */
+transform: translate(-50%, -50%);
+width: 60px;
+height: 60px;
+background: rgba(255, 255, 255, 0.2); /* デバッグ用（調整後は透明化） */
+border-radius: 50%;
+cursor: pointer;
+transition: transform 0.2s;
+}
+
+.nose-area:hover {
+transform: translate(-50%, -50%) scale(1.2);
+background: rgba(255, 255, 255, 0.3);
+}
+
+.nose-area:active {
+transform: translate(-50%, -50%) scale(0.9);
+}
+
+.nose-area.pop {
+animation: nosePop 0.5s;
+}
+
+@keyframes nosePop {
+0% { transform: translate(-50%, -50%) scale(1); }
+50% { transform: translate(-50%, -50%) scale(1.5); }
+100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+body {
+font-family: 'Arial', sans-serif;
+background: 
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container {
+text-align: center;
+}
+
+h1 {
+color: white;
+margin-bottom: 30px;
+font-size: 2em;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.cat.shake {
+animation: shake 0.5s;
+}
+
+@keyframes shake {
+0%, 100% { transform: rotate(0deg); }
+25% { transform: rotate(-10deg); }
+75% { transform: rotate(10deg); }
+}
